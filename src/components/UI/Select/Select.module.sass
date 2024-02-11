@@ -1,0 +1,46 @@
+@import "../../../styles/mixins"
+@import "../../../styles/variables"
+
+.select
+	min-height: 40px
+	height: 40px
+	overflow: hidden
+	cursor: pointer
+	background: #1e1e1e
+	width: 100%
+	border-radius: 5px
+
+	.selected
+		width: 100%
+		min-height: 40px
+		padding-left: 10px
+		padding-right: 10px
+		@include flex(space-between, center)
+		@include font(18px, 700, $light)
+		font-family: Raleway
+
+	ul
+		list-style-type: none
+		@include flex(flex-start, flex-start)
+
+		li
+			width: 100%
+			border: 1px solid $light
+			height: 40px
+			@include flex(center, center)
+			border-left: none
+			@include font(16px, 400, $light)
+			font-family: Raleway
+
+
+.notificationSelect
+	border: 1px solid $yellow
+
+.deadlineSelect
+	border: 1px solid $red
+
+.repetitionSelect
+	border: 1px solid $purple
+
+.visible
+	height: 80px

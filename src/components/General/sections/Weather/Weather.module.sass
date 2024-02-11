@@ -1,0 +1,101 @@
+@import "../../../../styles/mixins"
+@import "../../../../styles/variables"
+
+.cloudyIcon
+	@include size(24px, 24px)
+	color: #a8adb9
+
+.rainIcon
+	@include size(24px, 24px)
+	color: #9CC3F8
+
+.snowIcon
+	@include size(24px, 24px)
+	color: #fff
+
+.cloudyFog
+	@include size(24px, 24px)
+	color: #cdd0d8
+
+.cloudySun
+	@include size(24px, 24px)
+	color: #fff1c6
+
+.sunIcon
+	@include size(24px, 24px)
+	color: $yellow
+
+.partlyCloudyIcon
+	@include size(24px, 24px)
+	color: #ffffff
+
+
+.weather
+	margin-top: 50px
+	display: flex
+	flex-direction: column
+	gap: 15px
+
+	@include h2
+	h2
+		margin-bottom: 5px
+
+	.property
+		display: flex
+		align-items: center
+		gap: 5px
+
+		.value
+			@include font(18px, 400, #fff)
+			font-family: "Noto Sans"
+
+		.symbol
+			@include font(16px, 400, $grey)
+			font-family: "Noto Sans"
+
+		.direction
+			@include size(24px, 24px)
+			color: #9CC3F8
+
+	.sun
+		display: flex
+		align-items: center
+		gap: 10px
+
+		.sun
+			@include font(18px, 400, #fff)
+			font-family: Montserrat
+
+		hr
+			margin-top: 10px
+			width: 35px
+			height: 20px
+			border: none
+			border-top: 2px solid $yellow
+			border-radius: 50%
+
+	.wrapper
+		display: flex
+		justify-content: flex-start
+		margin-left: -10px
+
+		.item
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			gap: 5px
+			@include size(52px, 80px)
+
+			h4
+				@include font(16px, 400, $grey)
+				font-family: "Noto Sans"
+
+			.value
+				@include font(18px, 400, #fff)
+				font-family: "Noto Sans"
+
+
+				.symbol
+					@include font(16px, 400, $grey)
+					font-family: "Noto Sans"

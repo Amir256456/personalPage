@@ -1,0 +1,40 @@
+@import "../../../../styles/mixins"
+@import "../../../../styles/variables"
+
+.search
+	display: flex
+	flex-direction: column
+	gap: 20px
+
+	@include h2
+
+	.wrapper
+		@include flex(flex-start, flex-start, 10px, 10px, row, wrap)
+
+		.selected
+			background: $neon
+
+	.searchInput
+		@include size(280px, 40px)
+		background: transparent
+		border-radius: 5px
+		border: 1px solid #fff
+		padding: 0 10px
+		@include font(16px, 400, #fff)
+		font-family: Raleway
+		transition: all 0.3s ease-in-out
+
+		&:focus
+			border: 1px solid $neon
+
+	.searchBtn
+		@include size(280px, 40px)
+		background: $neon
+		@include font(18px, 700, $dark)
+		font-family: Raleway
+		transition: all 0.3s ease-in-out
+
+		&:hover
+			background: transparent
+			color: #fff
+			border: 1px solid $neon

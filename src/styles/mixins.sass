@@ -1,0 +1,30 @@
+@import "./variables"
+
+@mixin flex($jc, $ai: flex-start, $gap: 0, $rowGap: 0, $direction: row,	$wrap: no-wrap )
+	display: flex
+	flex-direction: $direction
+	justify-content: $jc
+	align-items: $ai
+	flex-wrap: $wrap
+	gap: $gap
+	row-gap: $rowGap
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin border($width, $color, $radius)
+	border: $width solid $color
+	border-radius: $radius
+
+@mixin font($fz, $fw: 400, $color, $lh: 1, $ls: 1)
+	font-size: $fz
+	font-weight: $fw
+	color: $color
+	line-height: $lh
+	letter-spacing: $ls
+
+@mixin h2
+	@include font(22px, 700, #fff)
+	font-family: Raleway
+

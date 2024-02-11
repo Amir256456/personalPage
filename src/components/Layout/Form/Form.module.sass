@@ -1,0 +1,37 @@
+@import "../../../styles/mixins"
+@import "../../../styles/variables"
+form
+	width: 100%
+	@include flex(flex-start, flex-start, 0, 10px, column)
+
+	input
+		background: transparent
+		@include font(16px, 400, $light)
+		padding-left: 10px
+		border-radius: 5px
+		height: 40px
+		width: 100%
+		transition: all 0.3s ease-in-out
+		color: $light
+
+	.notificationInput
+		border: 1px solid $yellow
+
+	.deadlineInput
+		border: 1px solid $red
+
+	.repetitionInput
+		border: 1px solid $purple
+
+	button
+		background: $yellow
+		color: $dark
+
+	.notificationButton
+		background: $yellow
+
+	.deadlineButton
+		background: $red
+
+	.repetitionButton
+		background: $purple
