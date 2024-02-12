@@ -222,7 +222,9 @@ export const Study = () => {
 						<h3>{task.subject}</h3>
 						<span>{task.agenda}</span>
 					</div>
-					<div className={styles.link}>{task.link}</div>
+					<div className={styles.link}>
+						<a href={task.link}>{task.link}</a>
+					</div>
 					<div className={styles.description}>{task.description}</div>
 				</div>
 			))}

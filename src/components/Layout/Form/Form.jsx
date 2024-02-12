@@ -64,7 +64,7 @@ export const Form = ({ type }) => {
 		console.log(response)
 		setDescription('')
 	}
-
+	console.log(selectedSubject)
 	const handleRepetitionSubmit = async e => {
 		e.preventDefault()
 		const expireAt = new Date()
@@ -134,8 +134,6 @@ export const Form = ({ type }) => {
 				'Content-Type': 'application/json', // or any other content type you need
 			},
 		}
-
-		console.log(agenda, description, showDate, expireAt, link)
 
 		const response = await axios.post(
 			'https://tasker-backend.vercel.app/api/addTask',
