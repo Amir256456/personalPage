@@ -75,56 +75,56 @@ export const Form = ({ type }) => {
 		let showDate = [new Date(), new Date()]
 
 		if (new Date().getDay() === 1) {
-			if (subject === 'CA') {
+			if (selectedSubject === 'CA') {
 				showDate[1].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
-			if (subject === 'DM') {
+			if (selectedSubject === 'DM') {
 				showDate[1].setDate(new Date().getDate() + (6 - new Date().getDay()))
 			}
 		}
 
 		if (new Date().getDay() === 2) {
-			if (subject === 'AE') {
+			if (selectedSubject === 'AE') {
 				showDate[1].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
-			if (subject === 'DM') {
+			if (selectedSubject === 'DM') {
 				showDate[1].setDate(new Date().getDate() + 1)
 				showDate[2].setDate(new Date().getDate() + (6 - new Date().getDay()))
 			}
-			if (subject === 'H1') {
+			if (selectedSubject === 'H1') {
 				showDate[1].setDate(new Date().getDate() + 2)
 				showDate[2].setDate(new Date().getDate() + (6 - new Date().getDay()))
 			}
 		}
 
 		if (new Date().getDay() === 3) {
-			if (subject === 'SP') {
+			if (selectedSubject === 'SP') {
 				showDate[1].setDate(new Date().getDate() + (6 - new Date().getDay()))
 			}
-			if (subject === 'DLC') {
+			if (selectedSubject === 'DLC') {
 				showDate[1].setDate(new Date().getDate() + 2)
 				showDate[2].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
 		}
 
 		if (new Date().getDay() === 4) {
-			if (subject === 'SP') {
+			if (selectedSubject === 'SP') {
 				showDate[1].setDate(new Date().getDate() + (6 - new Date().getDay()))
 			}
-			if (subject === 'AE') {
+			if (selectedSubject === 'AE') {
 				showDate[2].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
-			if (subject === 'BK') {
+			if (selectedSubject === 'BK') {
 				showDate[1].setDate(new Date().getDate() + 1)
 				showDate[2].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
 		}
 
 		if (new Date().getDay() === 5) {
-			if (subject === 'CA') {
+			if (selectedSubject === 'CA') {
 				showDate[1].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
-			if (subject === 'DLC') {
+			if (selectedSubject === 'DLC') {
 				showDate[2].setDate(new Date().getDate() + (7 - new Date().getDay()))
 			}
 		}

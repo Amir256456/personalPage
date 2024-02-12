@@ -64,19 +64,20 @@ export const Study = () => {
 		const todayDate = new Date().getDate()
 		const todayDay = new Date().getDay()
 		let todaysTasks = []
-		if (todayDate === 1) {
+		console.log(data)
+		if (todayDay === 1) {
 			todaysTasks = data.filter(
-				dat => dat.subject === 'CA' && dat.subject === 'DM'
+				dat => dat.subject === 'CA' || dat.subject === 'DM'
 			)
 		}
 		if (todayDay === 2) {
 			todaysTasks = data.filter(
-				dat => dat.subject === 'SP' && dat.subject === 'H1'
+				dat => dat.subject === 'SP' || dat.subject === 'H1'
 			)
 		}
 		if (todayDay === 3) {
 			todaysTasks = data.filter(
-				dat => dat.subject === 'DM' && dat.subject === 'SP'
+				dat => dat.subject === 'DM' || dat.subject === 'SP'
 			)
 		}
 		if (todayDay === 4) {
@@ -85,24 +86,26 @@ export const Study = () => {
 		if (todayDay === 5) {
 			todaysTasks = data.filter(
 				dat =>
-					dat.subject === 'CA' && dat.subject === 'DLC' && dat.subject === 'BK'
+					dat.subject === 'CA' || dat.subject === 'DLC' || dat.subject === 'BK'
 			)
 		}
 		if (todayDay === 6) {
 			todaysTasks = data.filter(
 				dat =>
-					dat.subject === 'H1' && dat.subject === 'DM' && dat.subject === 'SP'
+					dat.subject === 'H1' || dat.subject === 'DM' || dat.subject === 'SP'
 			)
 		}
 		if (todayDay === 0) {
 			todaysTasks = data.filter(
 				dat =>
-					dat.subject === 'CA' &&
-					dat.subject === 'AE' &&
-					dat.subject === 'DLC' &&
+					dat.subject === 'CA' ||
+					dat.subject === 'AE' ||
+					dat.subject === 'DLC' ||
 					dat.subject === 'BK'
 			)
 		}
+
+		console.log(todayTasks)
 
 		setTodayTasks(
 			todaysTasks.filter(task =>
