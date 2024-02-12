@@ -44,8 +44,7 @@ export const TimeTable = () => {
 			)}
 			{timeTable.map(
 				table =>
-					table.day === day ||
-					(table.day === day + 1 && (
+					table.day === day && (
 						<div className={styles.wrapper} key={table.day}>
 							<h3>{dayToText(table.day)}</h3>
 							<ul>
@@ -61,7 +60,27 @@ export const TimeTable = () => {
 								))}
 							</ul>
 						</div>
-					))
+					)
+			)}
+			{timeTable.map(
+				table =>
+					table.day === day + 1 && (
+						<div className={styles.wrapper} key={table.day}>
+							<h3>{dayToText(table.day)}</h3>
+							<ul>
+								{table.subjects.map(subject => (
+									<li key={subject.name}>
+										{subject.name} -
+										<span className={styles.neonText}> {subject.room} </span> -
+										<span className={styles.timeText}>
+											{' '}
+											{subject.startTime}{' '}
+										</span>
+									</li>
+								))}
+							</ul>
+						</div>
+					)
 			)}
 		</div>
 	)
